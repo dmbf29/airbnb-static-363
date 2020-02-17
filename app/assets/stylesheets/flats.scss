@@ -1,9 +1,25 @@
-.card {
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px
+}
+
+.card-white {
   position: relative;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   &:hover {
     background-color: rgb(245, 245, 245);
   }
+  h6 {
+    margin-top: 8px;
+  }
+}
+
+.card-info {
+  padding: 8px;
 }
 
 .card-link {
