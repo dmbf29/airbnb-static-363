@@ -1,10 +1,10 @@
 <h1>Flats#index</h1>
 <p>Find me in app/views/flats/index.html.erb</p>
 <% @flats.each do |flat| %>
-  <div style="position: relative;background-color: lightgray">
+  <div class="card">
     <h4><%= flat["name"]  %></h4>
     <%= image_tag flat["imageUrl"], alt: "alttext", width: "300px" %>
     <p><%= flat["price"] %> <%=flat["priceCurrency"] %></p>
-    <%= link_to "", flat_path(flat["id"]), style: 'position: absolute;width:100%;height:100%;top:0px;left:0px' %>
+    <%= link_to "", flat_path(flat["id"]), class: 'card-link' %>
   </div>
 <% end %>
